@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día Mamá Karina</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 25%, #dda0dd 50%, #ffb6d9 75%, #ffc8dd 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Corazones flotantes de fondo */
+        .heart-bg {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.3;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-50px) rotate(10deg);
+                opacity: 0.5;
+            }
+        }
+
+        .card-container {
+            perspective: 1000px;
+            animation: cardEntrance 1s ease-out;
+        }
+
+        @keyframes cardEntrance {
+            from {
+                transform: scale(0.5) rotateY(90deg);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) rotateY(0deg);
+                opacity: 1;
+            }
+        }
+
+        .card {
+            width: 400px;
+            background: linear-gradient(145deg, #ffffff, #fff5f7);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Decoración floral */
+        .flower {
+            position: absolute;
+            font-size: 50px;
+            animation: rotate 20s linear infinite;
+        }
+
+        .flower-1 {
+            top: -20px;
+            left: -20px;
+        }
+
+        .flower-2 {
+            bottom: -20px;
+            right: -20px;
+            animation-direction: reverse;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .heart-icon {
+            font-size: 60px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 5px 15px rgba(255, 105, 180, 0.5));
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ff1493;
+            margin: 20px 0 10px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+            animation: titleGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3); }
+            50% { text-shadow: 2px 2px 20px rgba(255, 105, 180, 0.6); }
+        }
+
+        .name {
+            font-size: 42px;
+            color: #da70d6;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(218, 112, 214, 0.4);
+        }
+
+        .message {
+            background: linear-gradient(to right, #ffd1dc, #ffb6d9);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 25px 0;
+            border: 3px solid #ff69b4;
+            position: relative;
+            animation: messagePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes messagePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .message p {
+            color: #8b008b;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .signature {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #ff1493;
+        }
+
+        /* Partículas brillantes */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+            box-shadow: 0 0 10px #ff69b4;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .butterfly {
+            position: absolute;
+            font-size: 40px;
+            animation: fly 10s ease-in-out infinite;
+        }
+
+        @keyframes fly {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(100px, -50px) rotate(10deg);
+            }
+            50% {
+                transform: translate(200px, 0) rotate(-10deg);
+            }
+            75% {
+                transform: translate(100px, 50px) rotate(5deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Corazones de fondo -->
+    <div class="heart-bg" style="top: 10%; left: 10%;">💕</div>
+    <div class="heart-bg" style="top: 20%; right: 15%; animation-delay: 2s;">💖</div>
+    <div class="heart-bg" style="bottom: 15%; left: 20%; animation-delay: 4s;">💗</div>
+    <div class="heart-bg" style="bottom: 25%; right: 10%; animation-delay: 6s;">💝</div>
+
+    <!-- Mariposas -->
+    <div class="butterfly" style="top: 15%; left: 5%;">🦋</div>
+    <div class="butterfly" style="bottom: 20%; right: 5%; animation-delay: 5s;">🦋</div>
+
+    <div class="card-container">
+        <div class="card">
+            <!-- Flores decorativas -->
+            <div class="flower flower-1">🌸</div>
+            <div class="flower flower-2">🌺</div>
+
+            <!-- Partículas brillantes -->
+            <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0.5s;"></div>
+            <div class="sparkle" style="top: 40%; right: 20%; animation-delay: 1s;"></div>
+            <div class="sparkle" style="bottom: 30%; left: 25%; animation-delay: 1.5s;"></div>
+            <div class="sparkle" style="bottom: 50%; right: 15%; animation-delay: 2s;"></div>
+
+            <div class="header">
+                <div class="heart-icon">❤️</div>
+                <h1>¡Feliz Día de la Madre!</h1>
+                <div class="name">Karina</div>
+            </div>
+
+            <div class="message">
+                <p>
+                    "Tu amor es el abrazo que calma,<br>
+                    la sonrisa que ilumina,<br>
+                    y la fuerza que inspira.<br><br>
+                    Eres el corazón de nuestro hogar<br>
+                    y la razón de nuestra felicidad."
+                </p>
+            </div>
+
+            <div class="signature">
+                <p>💐 Con todo nuestro amor 💐</p>
+                <p style="margin-top: 10px; font-size: 24px;">🌷🌹🌻</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
